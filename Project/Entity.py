@@ -6,7 +6,7 @@ class Info:
         self.damage = damage
 
 
-class Spell:
+class Spell():
     def spell(self, spell_name, info, idk):
         self.spell_name = spell_name
         self.info = info
@@ -29,9 +29,10 @@ class Check:
         self.health += healing_points
 
 class Salve:
-    def health_salve(self, salve_name, healing_points):
+    def health_salve(self, salve_name, healing_points, snumber):
         self.salve_name = salve_name
         self.healing_points = healing_points
+        self.snumber = snumber
 
 class Sword:
     def potion(self, sword_status):
