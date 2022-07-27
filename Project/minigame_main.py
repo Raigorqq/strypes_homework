@@ -1,10 +1,9 @@
-from Entity import Salve
 from Player import Human
 from Enemies import Ogre, Troll, Dragon
 
 
 
-class Fight(Human, Ogre, Troll, Dragon, Salve):
+class Fight(Human, Ogre, Troll):
     def EnemyFight(number):
 
         if int(number) == 1:
@@ -51,7 +50,7 @@ class Fight(Human, Ogre, Troll, Dragon, Salve):
                     print("You got dragon potion from " + enemy.nickname)
                     break
         
-class BossFight(Human, Ogre, Troll, Dragon, Salve):
+class BossFight(Dragon):
     def bfight():
      print("Final battle,", h.name, "!\n", dragon)
      while(h.health >= 0) or (dragon.health >= 0):
