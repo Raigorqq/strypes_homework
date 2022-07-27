@@ -2,7 +2,7 @@ from Player import Human
 from Enemies import Ogre, Troll, Dragon
 
 
-
+#enemyfight_class
 class Fight(Human, Ogre, Troll):
     def EnemyFight(number):
 
@@ -49,7 +49,7 @@ class Fight(Human, Ogre, Troll):
                 if enemy.health <= 0:
                     print("You got dragon potion from " + enemy.nickname)
                     break
-        
+#bossfight_class        
 class BossFight(Dragon):
     def BFight():
      print("Final battle,", h.name, "!\n", dragon)
@@ -89,16 +89,15 @@ class BossFight(Dragon):
         if dragon.health <= 0:
                 print("\nYOU DEFEAT ", dragon.name, "!\n THE CHEESE IS YOUR!!")
                 break
-# ------------------------------------------------------------------------
 
-#PLAYER:
 
+#player:
 h = Human("Pudge", "Butcher", 250, 25)
 h.health_salve("Healing Salve", 125, 5)
 h.potion(0)
-# ------------------------------------------------------------------------
 
-#Enemies:
+
+#enemies:
 #Troll
 troll = Troll("Bababoy", "Troll", 100, 20)
 
@@ -106,28 +105,27 @@ troll = Troll("Bababoy", "Troll", 100, 20)
 #Ogre
 ogre = Ogre("Chop","Ogre", 125, 24 )
 ogre.spell("Charge", "Orc goes crazy when his health is low and charges into his enemy before death", 40)
-# ------------------------------------------------------------------------
 
-#BOSS:
+
+#boss:
 #Dragon
 dragon = Dragon("Three-Headed Dragon", "Boss", 400, 40)
 dragon.spell("Thick skin", "Skin reduce damage by 20", 20)
-# ------------------------------------------------------------------------
 
-#LOCATION:
 
-# ------------------------------------------------------------------------
-
-#GAME:
+#game:
+#wayselect
 print("Welcome,", h, "\nYour mission is to steal CHEESE from Dragon!\n\nChoose your way:\n 1.Forest\n 2.Cave")
 number = input()
 if int(number) < 1 or int(number) > 2 :
     print("Wrong Number...\n Choose your way(enter number):\n 1.Forest\n 2.Cave")
     number = input()
+
+#enemyfight
 e = Fight
 e.EnemyFight(number)
 
+#bossfight
 boss = BossFight
 if h.is_alive() == True:
     boss.BFight()
-# ------------------------------------------------------------------------
