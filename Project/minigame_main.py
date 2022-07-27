@@ -5,7 +5,7 @@ from Enemies import Ogre, Troll, Dragon
 
 
 class Fight(Human, Ogre, Troll, Dragon, Salve):
-    def EnemyFight(self):
+    def EnemyFight(number):
 
         if int(number) == 1:
             location = "Forest"
